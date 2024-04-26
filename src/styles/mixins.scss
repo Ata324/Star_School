@@ -29,7 +29,7 @@
 }
 
 @mixin flex($fd:row,$jc:space-between, $ai:stretch, $gap:0,$fw:wrap){
-    flex: flex;
+    display: flex;
     flex-direction: $fd;
     justify-content: $jc;
     align-items: $ai;
