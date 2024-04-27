@@ -1,0 +1,22 @@
+@use "../../styles/mixins.scss" as m;
+@use "../../styles/variables" as v;
+
+.card {
+  height: 100%;
+
+  img{
+    width: 100%;
+  }
+  .card-subtitle {
+    @include m.flex();
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    svg{
+        color: v.$color1;
+       
+
+    }
+
+  }
+}

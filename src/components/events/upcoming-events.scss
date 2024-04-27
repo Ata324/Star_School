@@ -1,19 +1,21 @@
-
 @use "../../styles//mixins.scss" as m;
 
-.upcoming{
+.upcoming {
 
-.upcomingTitle{
-   @include m.flex($ai:center);
-   margin-bottom: 50px;
 
-   .section-title{
-    margin: 0;
-   }
+  .swiper-slide{
+   height: auto;
+  }
+  .upcomingTitle {
+    @include m.flex($ai: center);
+    margin-bottom: 50px;
 
-   svg{
-    font-size: 2rem;
-   }
-}
+    .section-title {
+      margin: 0;
+    }
 
+    svg {
+      font-size: 2rem;
+    }
+  }
 }
