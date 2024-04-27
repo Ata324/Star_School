@@ -6,7 +6,7 @@ import ButtonCallNow from "./button-call-now";
 
 const MainMenuBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary mb-3">
+    <Navbar expand="lg" className="bg-body-tertiary py-3 ">
       <Container>
         <Logo />
         <Navbar.Toggle aria-controls="main-menu" />
@@ -21,7 +21,7 @@ const MainMenuBar = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-          <MainMenu className="justify-content-center flex-grow-1 pe-3"/>
+          <MainMenu className="justify-content-center flex-grow-1 pe-3 m-0 "/>
            <ButtonCallNow/>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

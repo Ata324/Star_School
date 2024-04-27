@@ -1,0 +1,19 @@
+
+@use "../../styles//mixins.scss" as m;
+
+.upcoming{
+
+.upcomingTitle{
+   @include m.flex($ai:center);
+   margin-bottom: 50px;
+
+   .section-title{
+    margin: 0;
+   }
+
+   svg{
+    font-size: 2rem;
+   }
+}
+
+}
