@@ -1,22 +1,26 @@
-@use "../../styles/mixins.scss" as m;
 @use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
 
-.card {
-  height: 100%;
+.event-card{
+    height: 100%;
 
-  img{
-    width: 100%;
-  }
-  .card-subtitle {
-    @include m.flex();
-    margin-top: 10px;
-    margin-bottom: 20px;
-
-    svg{
-        color: v.$color1;
-       
-
+    img{
+        width:100%;
     }
 
-  }
+    .card-title{
+        margin-top:10px;
+        color: v.$color2;
+        font-size:1.2rem;
+    }
+
+    .card-subtitle{
+        @include m.flex();
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        svg{
+            color: v.$color1;
+        }
+    }
 }

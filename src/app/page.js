@@ -5,11 +5,12 @@ import UpcomingEvents from "@/components/events/upcoming-events";
 import MobileApp from "@/components/home/mobile-app";
 import Slider from "@/components/home/slider";
 
+
 export default function Home() {
   return (
     <>
-      <Slider />
-      <Spacer />
+      <Slider/>
+      <Spacer/>
       <Welcome/>
       <Spacer/>
       <FeaturedCourses/>

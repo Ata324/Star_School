@@ -1,11 +1,9 @@
-import { config } from '@/helpers/congif'
+import { config } from '@/helpers/config'
 import React from 'react'
 
 const ButtonCallNow = () => {
   return (
-    <div>
-        <a className='btn btn-outline-primary' href={`tel:${config.contact.phone1}`}>CALL NOW</a>
-    </div>
+    <a href={`tel:${config.contact.phone1}`} className="btn btn-outline-primary">CALL NOW !</a>
   )
 }
 

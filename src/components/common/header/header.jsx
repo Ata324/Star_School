@@ -1,13 +1,13 @@
 import React from 'react'
 import Topbar from './topbar'
-import MainMenuBar from './main-menu-bar'
+import MainMenuBar from './main-menubar'
 
 const Header = () => {
   return (
-    <div>
+    <>
         <Topbar/>
         <MainMenuBar/>
-    </div>
+    </>
   )
 }
 

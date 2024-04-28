@@ -1,5 +1,5 @@
 {
-  "name": "smartypractice",
+  "name": "smarty-schools-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "moment": "^2.30.1",
-    "next": "14.2.3",
+    "next": "14.2.2",
     "next-auth": "^4.24.7",
     "react": "^18",
     "react-bootstrap": "^2.10.2",
@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.2"
   }
 }

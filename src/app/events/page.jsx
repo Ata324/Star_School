@@ -1,17 +1,17 @@
-import PageHeader from "@/components/common/pageHeader";
-import Spacer from "@/components/common/spacer";
-import Events from "@/components/events/events";
-import React from "react";
+import PageHeader from '@/components/common/page-header'
+import Spacer from '@/components/common/spacer'
+import Events from '@/components/events/events'
+import React from 'react'
 
 const EventsPage = () => {
   return (
     <>
-      <PageHeader>Events</PageHeader>
-      <Spacer height="70px"/>
-      <Events />
-      <Spacer />
-    </>
-  );
-};
+			<PageHeader>Events</PageHeader>
+			<Spacer height={70} />
+			<Events />
+			<Spacer />
+		</>
+  )
+}
 
-export default EventsPage;
+export default EventsPage

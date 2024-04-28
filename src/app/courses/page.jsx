@@ -1,5 +1,4 @@
-
-import PageHeader from "@/components/common/pageHeader";
+import PageHeader from "@/components/common/page-header";
 import Spacer from "@/components/common/spacer";
 import Courses from "@/components/courses/courses";
 import React from "react";
@@ -7,9 +6,8 @@ import React from "react";
 const CoursesPage = () => {
 	return (
 		<>
-		
 			<PageHeader>Courses</PageHeader>
-			<Spacer height="70px" />
+			<Spacer height={70} />
 			<Courses />
 			<Spacer />
 		</>

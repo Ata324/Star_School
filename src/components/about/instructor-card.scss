@@ -1,35 +1,36 @@
 @use "../../styles/variables" as v;
-@use "../../styles/mixins.scss" as m;
+@use "../../styles/mixins" as m;
 
-.card {
-  overflow: hidden;
-  @include m.transition(transform 0.3s);
+.instructor-card{
+    overflow: hidden;
+    cursor: pointer;
 
     img{
+        width: 100%;
+        object-fit: cover;
         @include m.transition(transform 0.3s);
     }
 
-  .card-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: v.$color1-op-50;
-    padding: 10px 0 2px 10px;
-    margin: 0;
-    text-align: center;
-    @include m.transform(translateY(100px));
-    @include m.transition(transform 0.3s);
-  }
-
-  &:hover {
-    .card-title {
-      @include m.transform(translateY(0px));
+    .card-title{
+        background-color: v.$color1-op-50;
+        position: absolute;
+        bottom:0;
+        left:0; 
+        right:0;
+        text-align: center;
+        margin:0;
+        padding: 5px;
+        @include m.transform(translateY(100%));
+        @include m.transition(transform 0.3s);
     }
-    
-      img {
-        @include m.transform(scale(1.1) rotate(5deg));
-      }
-    
-  }
+
+    &:hover{
+        .card-title{
+            @include m.transform(translateY(0))
+        }
+
+        img{
+            @include m.transform(scale(1.1) rotate(5deg))
+        }
+    }
 }

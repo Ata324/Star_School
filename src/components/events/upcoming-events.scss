@@ -1,21 +1,21 @@
-@use "../../styles//mixins.scss" as m;
+@use "../../styles/mixins" as m;
+.upcoming-events{
 
-.upcoming {
-height: 100%;
-
-  .swiper-slide{
-    height: auto;
-  }
-  .upcomingTitle {
-    @include m.flex($ai: center);
-    margin-bottom: 50px;
-
-    .section-title {
-      margin: 0;
+    .swiper-slide{
+        height: auto;
     }
 
-    svg {
-      font-size: 2rem;
+    .section-title{
+        margin: 0;
     }
-  }
+
+    .title{
+        @include m.flex($ai: center);
+        margin-bottom: 50px;
+
+        svg{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
 }
