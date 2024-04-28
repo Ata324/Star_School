@@ -1,10 +1,10 @@
 @use "../../styles//mixins.scss" as m;
 
 .upcoming {
-
+height: 100%;
 
   .swiper-slide{
-   height: auto;
+    height: auto;
   }
   .upcomingTitle {
     @include m.flex($ai: center);
