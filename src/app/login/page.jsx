@@ -6,9 +6,8 @@ import React from 'react'
 const LoginPage = () => {
   return (
     <>
-   
         <PageHeader>Login</PageHeader>
-        <Spacer/>
+        <Spacer height={70}/>
         <LoginForm/>
         <Spacer/>
     </>
