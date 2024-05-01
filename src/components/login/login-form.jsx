@@ -1,9 +1,17 @@
 "use client";
-import { Button, Card, CardBody, Col, Container, Form, Row } from "react-bootstrap";
+import {
+  Button,
+  Card,
+  CardBody,
+  Col,
+  Container,
+  Form,
+  Row,
+} from "react-bootstrap";
 import "./login-form.scss";
 import { loginAction } from "@/actions/auth-action";
 import { initialResponse } from "@/helpers/form-validation";
-import {useFormState} from "react-dom";
+import { useFormState } from "react-dom";
 import PasswordInput from "../common/form-fields/password-input";
 const LoginForm = () => {
   const [state, dispatch] = useFormState(loginAction, initialResponse);
@@ -21,19 +29,24 @@ const LoginForm = () => {
                   <Form.Control
                     name="username"
                     type="text"
-                    isInvalid={!!state.errors?.username}
+                    isInvalid={!!state?.errors?.username}
+                    defaultValue="root"
                   />
                   <Form.Control.Feedback type="invalid">
-                    {state.errors?.username}
+                    {state?.errors?.username}
                   </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="password">
                   <Form.Label>Password</Form.Label>
-                <PasswordInput name="password" error={state.errors.password}/>
+                  <PasswordInput
+                    name="password"
+                    error={state?.errors?.password}
+                    defaultValue="12345aA."
+                  />
                 </Form.Group>
                 <Button variant="primary" type="submit" className="w-100">
-                    LOGIN
+                  LOGIN
                 </Button>
               </Form>
             </CardBody>

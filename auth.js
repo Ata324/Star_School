@@ -7,42 +7,57 @@ export const config={
     providers:[
 
         Credentials({
-            async authorized(auth,request){
-                const res= await login(auth);
-                const data=await res.json();
-
-                if(!res.ok) return null;
+            async authorize(credentials) {
+              
+               const res=await login(credentials);
+               const data=await res.json();
+               
+                if(!data.ok) return;
 
                 const payload={
                     user:{...data},
-                    accessToken: data.token.split(" ")[1]
+                    accessToken:data.token.split(" ")[1]
                 }
                 delete payload.user.token;
                 return payload;
+
             }
         })
     ],
     callbacks:{
-        authorize({auth,request}){
-            const {pathname}=request.nextUrl;
+        authorized({auth,request}){
+            const {pathname}= request.nextUrl;
+            const isLoggedIn = !!auth?.user?.role;
+			const isInLoginPage = pathname.startsWith("/login");
+            const isInDashboardPages = pathname.startsWith("/dashboard");
 
-            const isLoggedIn=auth.user?.role;
-            const isInLoggedPage=pathname.startsWith("/login");
-            const isInDashboardPage=pathname.startsWith("/dashboard");
+            if (isLoggedIn) {
+				if (isInDashboardPages) {
+					return true;
+				} else if (isInLoginPage) {
+					return Response.redirect(new URL("/dashboard"),request.nextUrl);
+					
+				}
+			} else if (isInDashboardPages) {
+				return false;
+			}
 
-            if(isLoggedIn){
+			return true;
 
-                if(isInDashboardPage){
-                    return true;
-                }else if(isInLoggedPage){
-                    return Response.redirect(new Url("/dashboard",request.nextUrl));
-                }else if(isInDashboardPage){
-                    return false;
-                }
-                return true;
-            }
         }
     },
+
+    async jwt({token,user}){
+
+        return{...token,...user}
+    },
+    async session({session,token}){
+        
+        session.user=token.user;
+        session.accessToken=token.accessToken;
+        return session;
+    },
+
         pages:{
             signIn:"/login"
         }
