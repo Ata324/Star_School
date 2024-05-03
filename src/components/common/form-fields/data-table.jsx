@@ -2,21 +2,30 @@ export const Column = ({ children }) => {
   return <th>{children}</th>;
 };
 
-export const Cell = ({ children }) => {
+/* export const Cell = ({ children }) => {
   return <td>{children}</td>;
 };
 
 export const Row = ({ children }) => {
   return <tr>{children}</tr>;
 };
+ */
+
+export const Row = ({ children }) => {
+  return <tr>{children}</tr>;
+};
+
+export const Cell = ({ children }) => {
+  return <td>{children}</td>;
+};
 
 const DataTable = (props) => {
   const { title, children, dataSource, dataKey } = props;
 
-  console.log(children);
-
   if (!dataSource || !Array.isArray(dataSource))
     throw new Error("dataSources attribute is required");
+
+  if (!dataKey) throw new Error("dataKey is required");
 
   return (
     <div className="card">
@@ -28,17 +37,15 @@ const DataTable = (props) => {
               <tr>{children}</tr>
             </thead>
             <tbody>
-              {dataSource.map((row) => (
-                <Row key={row[dataKey]}>
-                  {children.map((cell) => {
-                    const { dataField, index } = cell.props;
-                    let cellData = "";
-                    cellData = row[dataField];
-                    const cellKey=row[dataKey]+dataField+cellData;
-                    return <Cell key={cellKey}>{cellData}</Cell>;
-                  })}
-                </Row>
-              ))}
+              {
+                dataSource.map((row)=>(
+                  <Row>
+                    <Cell>
+                      {row[dataKey]}
+                    </Cell>
+                  </Row>
+                ))
+              }
             </tbody>
           </table>
         </div>
