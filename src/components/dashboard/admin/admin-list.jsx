@@ -3,12 +3,8 @@ import Link from "next/link";
 import React from "react";
 import { Container } from "react-bootstrap";
 
-const AdminList = () => {
-  const arr = [
-    { id: 2, name: "can", surname: "kan", username:"bal" },
-    { id: 3, name: "van", surname: "dam", username:"bal"},
-    { id: 4, name: "lan", surname: "bak", username:"bal"},
-  ];
+const AdminList = ({data}) => {
+  const { content, totalPages, number, size } = data;
 
   return (
     <Container>
@@ -16,7 +12,15 @@ const AdminList = () => {
         New
       </Link>
 
-      <DataTable title="Admin List" dataSource={arr} dataKey="id">
+      <DataTable
+        title="Admin List"
+        dataSource={content}
+        dataKey="id"
+        totalPages={totalPages}
+        currentPage={number}
+        pageSize={size}
+      >
+        <Column index={true}>#</Column>
         <Column dataField="name">First name</Column>
         <Column dataField="surname">Last name</Column>
         <Column dataField="username">Username</Column>

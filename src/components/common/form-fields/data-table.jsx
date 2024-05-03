@@ -20,7 +20,15 @@ export const Cell = ({ children }) => {
 };
 
 const DataTable = (props) => {
-  const { title, children, dataSource, dataKey } = props;
+  const {
+    title,
+    dataSource,
+    dataKey,
+    totalPages,
+    currentPage,
+    pageSize,
+    children,
+  } = props;
 
   if (!dataSource || !Array.isArray(dataSource))
     throw new Error("dataSources attribute is required");
@@ -37,15 +45,26 @@ const DataTable = (props) => {
               <tr>{children}</tr>
             </thead>
             <tbody>
-              {
-                dataSource.map((row)=>(
-                  <Row>
-                    <Cell>
-                      {row[dataKey]}
-                    </Cell>
-                  </Row>
-                ))
-              }
+              {dataSource.map((row, rowIndex) => (
+                <Row key={row[dataKey]}>
+                  {children.map((cell) => {
+                    const { dataField, index } = cell.props;
+                    let cellData = "";
+
+                    const cellKey = row[dataKey] + dataField + cellData;
+
+                    if (index) {
+                      cellData = pageSize * currentPage + rowIndex + 1;
+                    } else if (dataField) {
+                      cellData = row[dataField];
+                    } else if (template) {
+                      cellData = template(row);
+                    }
+
+                    return <Cell key={cellKey}>{cellData}</Cell>;
+                  })}
+                </Row>
+              ))}
             </tbody>
           </table>
         </div>
