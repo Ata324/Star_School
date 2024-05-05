@@ -7,7 +7,7 @@ export const Column = ({ children }) => {
 };
 
 export const Row = ({ children }) => {
-  return <tr>{children}</tr>;
+  return <tr>{children}</tr>;c--
 };
  */
 
