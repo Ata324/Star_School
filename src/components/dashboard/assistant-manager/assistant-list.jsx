@@ -1,8 +1,9 @@
 import DataTable, { Column } from '@/components/common/form-fields/data-table';
 import Link from 'next/link';
 import React from 'react'
+import { Container } from 'react-bootstrap';
 
-const AssistanManagertList = ({data}) => {
+const AssistantList = ({data}) => {
 
     const { content, totalPages, number, size } = data;
 
@@ -34,4 +35,4 @@ const AssistanManagertList = ({data}) => {
   )
 }
 
-export default AssistanManagertList
+export default AssistantList

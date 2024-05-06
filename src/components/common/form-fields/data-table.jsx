@@ -28,6 +28,7 @@ const DataTable = (props) => {
     currentPage,
     pageSize,
     children,
+    template
   } = props;
 
   if (!dataSource || !Array.isArray(dataSource))
