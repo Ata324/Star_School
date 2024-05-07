@@ -2,14 +2,7 @@ export const Column = ({ children }) => {
   return <th>{children}</th>;
 };
 
-/* export const Cell = ({ children }) => {
-  return <td>{children}</td>;
-};
 
-export const Row = ({ children }) => {
-  return <tr>{children}</tr>;c--
-};
- */
 
 export const Row = ({ children }) => {
   return <tr>{children}</tr>;
