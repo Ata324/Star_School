@@ -8,10 +8,11 @@ const Logo = ({ type = "dark" }) => {
 	return (
 		<NavbarBrand href="/" as={Link}>
 			<Image
-				src={`/images/logo/logo-${type}.png`}
+				src={`/images/logo/logo6.jpg`}
 				width={199}
 				height={69}
 				alt={config.project.name}
+				objectFit="cover"
 			/>
 		</NavbarBrand>
 	);

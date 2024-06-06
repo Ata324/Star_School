@@ -5,46 +5,47 @@ import aboutImage from "../../../public/images/about/welcome.jpg";
 import { config } from "@/helpers/config";
 
 const Welcome = () => {
-	return (
-		<Container>
-			<Row className="g-5 align-items-center ">
-				<Col md={6}>
-					<Image
-						src={aboutImage}
-						alt={config.project.slogan}
-						className="img-fluid"
-					/>
-				</Col>
-				<Col md={6}>
-					<h2 className="text-primary">Welcome to the most preferred IT School</h2>
-					<p>
-						Through a combination of lectures, readings,
-						discussions, students will gain a solid foundation in
-						educational psychology.
-					</p>
+  return (
+    <Container>
+      <Row className="g-5 align-items-center ">
+        <Col md={6}>
+          <Image
+            src={aboutImage}
+            alt={config.project.slogan}
+            className="img-fluid"
+          />
+        </Col>
+        <Col md={6}>
+          <h2 className="text-primary">
+            Welcome to Star Elementary School: The Most Preferred School
+          </h2>
+          <p>
+            At Star Elementary School, we combine lectures, readings, and
+            discussions to provide students with a solid foundation in
+            educational psychology, preparing you for a successful academic
+            journey.
+          </p>
 
-					<ul className="list-inline-item">
-						<li>
-							Cutting-edge curriculum for the latest IT trends and
-							technologies.
-						</li>
-						<li>
-							Expert instructors passionate about sharing their
-							knowledge.
-						</li>
-						<li>
-							Hands-on training and real-world projects for
-							practical experience.
-						</li>
-						<li>
-							Earn industry-recognized certifications for enhanced
-							employability.
-						</li>
-					</ul>
-				</Col>
-			</Row>
-		</Container>
-	);
+          <ul className="list-inline-item">
+            <li>
+              Cutting-edge Curriculum: Stay ahead with the latest educational
+              trends and methodologies.
+            </li>
+            <li>
+              Expert Instructors: Learn from passionate professionals eager to
+              share their knowledge.
+            </li>
+            <li>
+			Hands-on Training: Gain practical experience through real-world projects.
+            </li>
+            <li>
+			Recognized Certifications: Enhance your opportunities with certifications that matter.
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
+  );
 };
 
 export default Welcome;

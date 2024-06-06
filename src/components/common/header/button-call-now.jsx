@@ -3,7 +3,7 @@ import React from 'react'
 
 const ButtonCallNow = () => {
   return (
-    <a href={`tel:${config.contact.phone1}`} className="btn btn-outline-primary">CALL NOW !</a>
+    <a href={`tel:${config.contact.phone1}`} className="btn btn-outline-secondary">CALL NOW !</a>
   )
 }
 

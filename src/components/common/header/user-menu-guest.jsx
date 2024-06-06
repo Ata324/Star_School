@@ -4,7 +4,7 @@ import { TfiLock } from "react-icons/tfi";
 
 const UserMenuGuest = () => {
 	return (
-		<Link href="/login" className="btn btn-primary">
+		<Link href="/login" className="btn btn-secondary">
 			<TfiLock /> Login
 		</Link>
 	);

@@ -6,7 +6,7 @@ import UserMenu from './user-menu';
 
 const Topbar = () => {
   return (
-    <div className="topbar">
+    <div className="topbar bg-danger">
         <Container>
             <div className="slogan">
                 📢 {config.project.slogan} 
