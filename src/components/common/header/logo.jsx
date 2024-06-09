@@ -8,12 +8,12 @@ const Logo = ({ type = "dark" }) => {
 	return (
 		<NavbarBrand href="/" as={Link}>
 			<Image
-				src={`/images/logo/logo6.jpg`}
+				src={`/images/logo/star.webp`}
 				width={240}
 				height={79}
 				alt={config.project.name}
 				objectFit="cover"
-				className="rounded-4"
+				className="rounded-4 bg-light"
 			/>
 		</NavbarBrand>
 	);

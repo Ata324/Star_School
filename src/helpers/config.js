@@ -1,9 +1,9 @@
 export const config = {
 	project: {
-		name: "Smarty Schools",
+		name: "Start School",
 		slogan: "Right Time Right Now",
 		description:
-			"At Smarty Schools, we empower individuals with the skills and knowledge they need to thrive in the dynamic world of cloud technologies. Our comprehensive bootcamps equip you with the expertise to master essential cloud platforms like AWS, Azure, and Google Cloud Platform, enabling you to confidently navigate the ever-evolving landscape of cloud computing.",
+			"At Start Schools, we empower individuals with the skills and knowledge they need to thrive in the dynamic world of cloud technologies. Our comprehensive bootcamps equip you with the expertise to master essential cloud platforms like AWS, Azure, and Google Cloud Platform, enabling you to confidently navigate the ever-evolving landscape of cloud computing.",
 		version: "1.0.0",
 	},
 	contact: {
