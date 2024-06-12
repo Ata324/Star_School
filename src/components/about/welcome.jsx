@@ -17,10 +17,10 @@ const Welcome = () => {
         </Col>
         <Col md={6}>
           <h2 className="text-primary">
-            Welcome to Star Elementary School: The Most Preferred School
+            Welcome to Star School: The Most Preferred School
           </h2>
           <p>
-            At Star Elementary School, we combine lectures, readings, and
+            At Star School, we combine lectures, readings, and
             discussions to provide students with a solid foundation in
             educational psychology, preparing you for a successful academic
             journey.
